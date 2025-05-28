@@ -1,4 +1,3 @@
-
 body {
   font-family: 'メイリオ', Meiryo;
   text-align: center;
@@ -44,7 +43,6 @@ button {
   display: block; 
 }
 
-
 .confirmed {
   pointer-events: none;
 }
@@ -65,4 +63,31 @@ button {
 footer {
   padding: 50px;
   text-align: center;
+}
+
+/* スマホ対応のレスポンシブデザイン */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  button {
+    font-size: 20px;
+    padding: 8px 16px;
+  }
+
+  .linebutton {
+    width: 90%; /* 幅をデバイスに合わせる */
+    height: auto;
+    font-size: medium;
+  }
+
+  #history {
+    max-width: 100%; /* 履歴の幅を調整 */
+    padding: 10px;
+  }
+
+  footer {
+    padding: 20px;
+  }
 }
