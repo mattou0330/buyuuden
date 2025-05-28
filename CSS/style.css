@@ -67,19 +67,17 @@ footer {
 
 /* スマホ対応のレスポンシブデザイン */
 @media screen and (max-width: 768px) {
-  body {
-    padding: 10px;
-  }
 
   button {
-    font-size: 20px;
-    padding: 8px 16px;
+    font-size: 18px; /* ボタンのフォントサイズを調整 */
+    padding: 12px 20px; /* ボタンの余白を調整 */
   }
 
   .linebutton {
-    width: 90%; /* 幅をデバイスに合わせる */
+    width: 100%; /* 幅をデバイスに合わせる */
     height: auto;
-    font-size: medium;
+    font-size: 18px; /* フォントサイズを調整 */
+    padding: 10px; /* 余白を追加 */
   }
 
   #history {
@@ -89,5 +87,6 @@ footer {
 
   footer {
     padding: 20px;
+    font-size: 16px; /* フッターの文字サイズを調整 */
   }
 }
