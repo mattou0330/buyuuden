@@ -19,11 +19,21 @@ $(function () {
 
   function checkAndSave() {
     if (result.line1 && result.line2 && result.line3) {
-      const story = `${result.line1}<br>${result.line2}<br>${result.line3}`;
+      const story = `${result.line1}\n${result.line2}\n${result.line3}`;
       let history = JSON.parse(localStorage.getItem("burodenHistory") || "[]");
       history.unshift(story);
       localStorage.setItem("burodenHistory", JSON.stringify(history));
       showHistory();
+  
+      // 投稿ボタンを表示
+      $("#postToX").show();
+  
+      // 投稿ボタンのクリックイベントを設定
+      $("#postToX").off("click").on("click", function () {
+        const tweetText = encodeURIComponent(story);
+        const tweetUrl = `https://twitter.com/intent/tweet?text=${tweetText}`;
+        window.open(tweetUrl, "_blank");
+      });
     }
   }
 
